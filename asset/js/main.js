@@ -28,7 +28,11 @@
     class CardCarousel {
         constructor(carouselElement, images) {
             this.carousel = carouselElement;
-            this.images = images;
+            this.images = images.map((img, index) => ({
+                src: img,
+                title: `Card ${index + 1}`,
+                description: `Description for Card ${index + 1}`
+            }));
             this.currentIndex = 0;
             this.init();
         }
@@ -52,23 +56,49 @@
             }
         }
 
-        createCard(imageSrc, isCenter) {
+        createCard(imageData, isCenter) {
             const card = document.createElement('div');
             card.classList.add('carousel-card');
             if (isCenter) card.classList.add('active');
 
             const img = document.createElement('img');
-            img.src = imageSrc;
+            img.src = imageData.src;
             img.alt = 'Carousel Image';
 
             const details = document.createElement('div');
             details.classList.add('card-details');
-            details.textContent = 'Card Details';
+
+            const detailsContent = document.createElement('div');
+            detailsContent.classList.add('card-details-content');
+
+            const textContainer = document.createElement('div');
+            const titleElem = document.createElement('div');
+            titleElem.textContent = imageData.title;
+            const descElem = document.createElement('div');
+            descElem.textContent = imageData.description;
+
+            const actionBtn = document.createElement('button');
+            actionBtn.classList.add('card-action-btn');
+            actionBtn.innerHTML = '<i class="bi bi-arrow-right"></i>';
+            actionBtn.addEventListener('click', () => this.handleCardAction(imageData));
+
+            textContainer.appendChild(titleElem);
+            textContainer.appendChild(descElem);
+
+            detailsContent.appendChild(textContainer);
+            detailsContent.appendChild(actionBtn);
+
+            details.appendChild(detailsContent);
 
             card.appendChild(img);
             card.appendChild(details);
 
             return card;
+        }
+
+        handleCardAction(cardData) {
+            // Example action - you can customize this
+            alert(`Action for ${cardData.title}`);
         }
 
         addEventListeners() {
