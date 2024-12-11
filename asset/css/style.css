@@ -1,0 +1,318 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .navbar-brand img {
+    max-height: 50px; /* Ensures the logo is responsive */
+  }
+  
+  .navbar-nav {
+    flex-wrap: wrap; /* Makes nav items wrap on smaller screens */
+  }
+  
+  .navbar-nav.nav-links {
+   margin-left: 70px;
+  }
+  
+  a.nav-link {
+    padding: 0px 27px!important;
+  }
+  .nav-link {
+    text-transform: uppercase;
+    color: #262626;
+    font-size: 14px;
+    text-transform: capitalize;
+    line-height: 16px;
+    font-weight: 700;
+    position: relative;
+    padding: 5px 15px;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-link:before, 
+  .nav-link:after {
+    content: '';
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    border: 3px solid #03DAD9;
+    transition: 0.3s;
+    opacity: 0;
+  }
+  
+  .nav-link:before {
+    border-width: 3px 3px 0 0;
+    top: 0;
+    right: 0;
+  }
+  
+  .nav-link:after {
+    border-width: 0 0 3px 3px;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .nav-link:hover:before {
+    top: -7px;
+    right: -7px;
+    opacity: 1;
+  }
+  
+  .nav-link:hover:after {
+    bottom: -7px;
+    left: -7px;
+    opacity: 1;
+  }
+  
+  .nav-link:hover {
+    background-color: #03DAD9;
+    color: #fff;
+  }
+  
+  .DownloadApp {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #03DAD9;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    transition: all 0.3s ease;
+  }
+  .DownloadApp:hover {
+    background-color: #03DAD9; /* Darker color on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 0 10px rgb(1, 255, 247); /* Add shadow on hover */
+  }
+  @media (max-width: 991px) {
+    .navbar-nav {
+      justify-content: center;
+      flex-direction: column; /* Stack items vertically */
+      align-items: center;
+    }
+  
+    .navbar-nav.nav-links {
+      position: static; /* Ensures alignment consistency */
+      top: auto;
+      left: auto;
+      transform: none;
+    }
+  
+    .nav-link {
+      padding: 10px; /* Increases padding for touch devices */
+    }
+
+    a.nav-link {
+        margin-top: 40px;
+        /* margin-bottom: 20px; */
+        align-items: start;
+        display: flex;
+        justify-content: center;
+    }
+  
+    .DownloadApp {
+      margin-top: 15px; /* Adds spacing for better layout */
+    }
+  }
+  
+  /* header-section-end */
+
+  /* Banner-Section-start */
+
+  .banner{
+    background-image: url('../img/banner1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-X: hidden;
+  }
+
+  .banner-title {
+    font-family: 'Panton', sans-serif;
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 60px;
+    text-align: center;
+    background: linear-gradient(134.66deg, #00DAD8 23.51%, #059FA3 74.69%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+
+  .banner-subtitle.mt-5{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  .appBtns img {
+    max-width: 200px;
+    height: auto; /* Ensures the images are responsive */
+  }
+
+  img.grp1Img {
+    margin-top: -109px;
+  }
+  .banner-bg.mt-5{
+    width: 630px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  /* grpImg-positionProperty */
+
+  .grp3Img{
+    position: absolute;
+    left: -5%;
+    bottom: 0%;
+  }
+
+  .grp4Img{
+    position: absolute;
+    bottom: 0%;
+    right: -8%;
+  }
+  button.accordion-button.collapsed {
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 50px;
+  }
+  button.accordion-button:not(.collapsed) {
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 50px;
+    color: #000;
+  }
+
+  .accordion-button {
+    width: 88%;
+   }
+
+  .Accordion_sec{
+     background-color: #fff;
+     border-radius: 10px;
+     box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25);
+     margin: 0px 0px 30px 0px;
+  }
+
+  .accordion-body {
+    padding: 1rem 1.25rem;
+    margin-left: 50px;
+  }
+  
+  @media (max-width: 768px) {
+    .banner-title {
+      font-size: 2rem;
+    }
+  
+    .banner-subtitle {
+      font-size: 1rem;
+    }
+  
+    .appBtns img {
+      max-width: 150px; /* Scales down app buttons on smaller screens */
+      margin-bottom: 10px;
+    }
+
+    .banner-bg.mt-5{
+        width: 300px;
+        height: auto;
+        margin: 0 auto;
+      }
+      button.accordion-button.collapsed {
+        font-size: 12px;
+        font-weight: 600;
+        margin-left: 0;
+      }
+      button.accordion-button:not(.collapsed) {
+        font-size: 14px;
+        font-weight: 600;
+        margin-left: 0;
+        color: #000;
+      }
+      .accordion-body {
+        padding: 10px;
+        font-size: 12px;
+        text-align: start;
+        margin-left: 0;
+      }
+  }
+
+  .accordion-button::after {
+    display: none; /* Removes the default arrow */
+  }
+ i[class^="fi-bs-"]:before, i[class*=" fi-bs-"]:before, span[class^="fi-bs-"]:before, span[class*="fi-bs-"]:before {
+        color: #03DAD9;
+ }
+
+ /* How-It-Works */
+
+.hiw-subtitle{
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 45px;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+.hiwSmart{
+    font-size: 14px;
+}
+
+.whyVideo-subtitle{
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 45px;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+
+@media (max-width: 768px) {
+    .whyVideo-subtitle {
+        font-size: 20px;
+    }
+}
+
+ button.prev-btn, button.next-btn {
+    padding: 10px;
+    width: 48px;
+    border-radius: 38px;
+    background-color: #000;
+    color: #fff;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    max-width: 1220px;
+    margin: auto;
+}
+
+.gallery-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.sliderImg{
+    max-width: 100%;
+    height: auto;
+    margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+    .prev-btn, .next-btn {
+        padding: 8px;
+    }
+} 
+
+
