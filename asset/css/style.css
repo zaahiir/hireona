@@ -287,6 +287,7 @@
   width: 100%;
   overflow: hidden;
   position: relative;
+  padding-bottom: 40px; /* Add padding at the bottom for button placement */
 }
 
 .carousel {
@@ -363,12 +364,12 @@
 
 .carousel-controls {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Center the buttons horizontally */
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  padding: 0 20px;
+  bottom: 0; /* Position at the bottom of the container */
+  left: 0;
+  right: 0;
+  gap: 20px; /* Add some space between buttons */
 }
 
 .carousel-btn {
@@ -410,10 +411,18 @@
   .carousel-card:not(.active) {
       display: none;
   }
+
+  .carousel-controls {
+      gap: 10px; /* Reduce gap between buttons on smaller screens */
+  }
 }
 
 @media (max-width: 480px) {
   .carousel-card {
       flex: 0 0 100%;
+  }
+
+  .carousel-controls {
+      gap: 15px; /* Adjust button spacing for very small screens */
   }
 }
