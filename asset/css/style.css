@@ -282,7 +282,7 @@
     }
 }
 
-.carousel-container {
+..carousel-container {
   max-width: 1650px;
   width: 100%;
   overflow: hidden;
@@ -310,7 +310,7 @@
 
 .carousel-card.active {
   opacity: 1;
-  transform: scale(1.1); /* Increased scale by 10% */
+  transform: scale(1.1);
   z-index: 10;
 }
 
@@ -321,15 +321,16 @@
 }
 
 .carousel-card.active img {
-  height: 275px; /* Increased height by 10% */
+  height: 275px;
 }
 
 .card-details {
   position: absolute;
-  bottom: 0;
+  bottom: 15px;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  height: 130px;
+  background-color: rgb(118 115 115 / 54%);
   color: white;
   padding: 10px;
   text-align: center;
@@ -368,16 +369,16 @@
 
 .carousel-controls {
   display: flex;
-  justify-content: center; /* Center the buttons horizontally */
+  justify-content: center;
   position: absolute;
-  bottom: 0; /* Position at the bottom of the container */
+  bottom: 0;
   left: 0;
   right: 0;
-  gap: 20px; /* Add some space between buttons */
+  gap: 20px;
 }
 
 .carousel-btn {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgb(0, 0, 0);
   color: white;
   border: none;
   padding: 10px 15px;
@@ -417,7 +418,7 @@
   }
 
   .carousel-controls {
-      gap: 10px; /* Reduce gap between buttons on smaller screens */
+      gap: 10px;
   }
 }
 
@@ -427,6 +428,6 @@
   }
 
   .carousel-controls {
-      gap: 15px; /* Adjust button spacing for very small screens */
+      gap: 15px;
   }
 }
